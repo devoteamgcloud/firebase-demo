@@ -6,11 +6,11 @@
 
 ## Create Firebase Project 
 
-1. Sign Up for a free Firebase Spark Plan using an exisitng Google Account or Create a new one.
+1. Sign Up for a free Firebase Spark Plan using an existing Google Account or create a new one.
 		
 		https://console.firebase.google.com/
 
-2. Create a new Project in Firebase Console
+2. Create a new project in the Firebase Console
 
 	![Create New Project](/src/assets/help/create_project.png)
 
@@ -18,32 +18,35 @@
 
 	![Register a app](/src/assets/help/add_an_app.png)
 
-4. Give your app a name. (Eg: SaltNPepper Menu) & Register the App
+4. Give your app a name. (Eg: SaltNPepper Menu) & register the app
 
 5. In the second step copy the 
 	const firebaseConfig....}; 
 	and go to VSCode and update the `src/utils/firestore.js` and replace the dummy section of const firebaseConfig = {}
 
-### Create FireStore Database
+### Create Firestore Database
 
 1. Navigate to Firebase Web UI Console.
 
 	![Create New Firestore Database](/src/assets/help/create_firestore.png)
 
-2. Keep Start in production mode select and click Next. Select server location closest to you and click on Enable and it’ll enable firestore in your project.
+2. Keep "Start in production mode" selected and click Next. Select server location closest to you and click on "Enable" and it’ll enable Firestore in your project.
+*PS: The location of the database may be locked if you've previously specified the server location in this Firebase project.*
 
-3. In the FireStore DB add a new Collection named **MenuCategories**. Inside this collection add an auto-ID document with two fields i.e. catName of string type, and catNumber of number type. Similarly add few Menu Categories like Starters, Main Course, Drinks etc.
+3. In the Firestore database add a new Collection named **MenuCategories**. Inside this collection add an auto-ID document with two fields i.e. catName of string type, and catNumber of number type. Similarly add few Menu Categories like Starters, Main Course, Drinks etc.
 
 ### Firebase Authentication
 
-1. Open console.firebase.com and go to the Authentication -> Sign-in method. 
-2. Select Email/Password and turn the switch on to enable it and Save.
-3. Select the Users tab and click on Add User. Add an email and password (I did Email: demo@snp.io & Password:Password123) and click Add User. 
-*PS: We’ll only keep one email to log in and we’re not going to have signup functionality.*
+1. Open console.firebase.com and go to the Authentication and click on "Get started".
+2. Select the tab called "Sign-in method".
+3. Select Email/Password and turn the switch on to enable it and save the changes.
 
 ![Authentication](/src/assets/help/firebase_auth.png)
 
-Now we have a user that we’ll use as an authenticated user to perform write operations on the firestore database.
+3. Select the "Users"-tab and click on "Add User". Add an email and password (I did Email: demo@snp.io & Password:Password123) and click "Add User". 
+*PS: We’ll only keep one email to log in and we’re not going to have signup functionality.*
+
+Now we have a user that we’ll use as an authenticated user to perform write operations on the Firestore database.
 
 ## Run the App Locally
 
@@ -51,11 +54,11 @@ Now we have a user that we’ll use as an authenticated user to perform write op
 
 ## Firebase Hosting
 
-1. Go to your firebase console and select Hosting and click on Get started
+1. Go to your firebase console and select Hosting and click on "Get started".
 
 	![Hosting](/src/assets/help/hosting.png)
 
-2. In the Firebase Hosting Console, Set Up Firebase Hosting. On step 3 (in the web UI) just press Continue to console as we’ll do the Deploy from command line.
+2. In the Firebase Hosting Console, Set Up Firebase Hosting. On step 3 (in the web UI) just press "Continue" to console as we’ll do the Deploy from command line.
 
 	![Hosting Setup](/src/assets/help/hosting_config.png)
 
