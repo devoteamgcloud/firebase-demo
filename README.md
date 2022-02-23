@@ -20,7 +20,7 @@
 
 4. Give your app a name. (Eg: SaltNPepper Menu) & register the app
 
-5. In the second step copy the 
+5. In the second step in Web UI, copy the 
 	const firebaseConfig....}; 
 	and go to VSCode and update the `src/utils/firestore.js` and replace the dummy section of const firebaseConfig = {}
 
@@ -35,13 +35,21 @@
 2. Keep "Start in production mode" selected and click Next. Select server location closest to you and click on "Enable" and it’ll enable Firestore in your project.
 *PS: The location of the database may be locked if you've previously specified the server location in this Firebase project.*
 
-3. Now we will add a new Collection to Firestore Database. The documents in this collection will serve as a Value Dictionary (dropdown list values) in our App. This step can be given as feture thru the App. But in the intrest of keeping the App simple, we are doing a hack by keying in the data directly to Database.
+3. Now we will add a new Collection to Firestore Database. The documents in this collection will serve as a Value Dictionary (dropdown list values) in our App. This step can be given as feature in the App. But in the interest of keeping the App simple, we are doing a hack by keying in the data directly to Firestore Database.
 
-In the Firestore database Web UI Console add a new Collection named **MenuCategories**. Inside this collection add an auto-ID document with two fields i.e. catName of string type, and catNumber of number type. Similarly add few Menu Categories like Starters, Main Course, Drinks etc.
+	In the Firestore database Web UI Console add a new Collection named **MenuCategories**. Inside this collection add an auto-ID document with two fields i.e. catName of **string** type, and catNum of **number** type. Similarly add few more Menu Categories like Main Course, Drinks, Sides etc.
 
-![Create Collection](/src/assets/help/menu_cat_collection_creation.png)
+	![Create Collection](/src/assets/help/menu_cat_collection_creation.png)
 
-![Collection details](/src/assets/help/menu_categories.png)
+	![Collection details](/src/assets/help/menu_categories.png)
+
+4. Firestore Security rules: Replace the exisitng security rule "allow read, write: if false;" 
+	Add below 2 security rules to allow read access to all collections for unauthenticated users (public) and write access for only authenticated users. Click Publish after the changes are made.
+
+	  allow read, write: if request.auth != null;
+      allow read;
+
+    ![Collection Security](/src/assets/help/firestore_security_rules.png)
 
 ### Firebase Authentication
 
@@ -51,7 +59,7 @@ In the Firestore database Web UI Console add a new Collection named **MenuCatego
 
 ![Authentication](/src/assets/help/firebase_auth.png)
 
-3. Select the "Users"-tab and click on "Add User". Add an email and password (I did Email: demo@snp.io & Password:Password123) and click "Add User". 
+4. Select the "Users"-tab and click on "Add User". Add an email and password (I did Email: demo@snp.io & Password:Password123) and click "Add User". 
 *PS: We’ll only keep one email to log in and we’re not going to have signup functionality.*
 
 Now we have a user that we’ll use as an authenticated user to perform write operations on the Firestore database.
