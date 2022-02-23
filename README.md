@@ -46,7 +46,7 @@
 4. Firestore Security rules: Navigate to Rules tab in the Cloud Firestore Web UI.
 	Replace the exisitng security rule "allow read, write: if false;" with below 2 security rules to allow "read" access of all collections to unauthenticated users (public) and "write" access to only authenticated users. Click Publish after the changes are made.
 
-	  `allow read, write: if request.auth != null;`
+	  `allow read, write: if request.auth != null;`\
 	  `allow read;`
 
     ![Collection Security](/src/assets/help/firestore_security_rules.png)
@@ -85,11 +85,11 @@ Now we have a user that we’ll use as an authenticated user to perform write op
 4. Run firebase login on the terminal
 	`firebase login`
 
-5. Navigate into the project folder. In my case its the saltnpepper. Run the Firebase Init. 
+5. Navigate into the project folder. In my case its the saltnpepper. Run the Firebase Init.\ 
 	`firebase init`
 
-    when it asks to select Firebase feature select, 
-	`Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys`
+    when it asks to select Firebase feature select,\
+	`Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys`\
 	Then select 
 	`Use an existing project and select the project you have created for this tutorial.`
 	Then it’ll ask you to set a public directory, write build which will act as our public directory. We’re not using the public directory created for us during project creation as it’s firebase hosting so it’ll look for a build folder.
