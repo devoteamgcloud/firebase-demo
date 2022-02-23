@@ -24,6 +24,8 @@
 	const firebaseConfig....}; 
 	and go to VSCode and update the `src/utils/firestore.js` and replace the dummy section of const firebaseConfig = {}
 
+	![App Config](/src/assets/help/app_config.png)
+
 ### Create Firestore Database
 
 1. Navigate to Firebase Web UI Console.
@@ -33,7 +35,13 @@
 2. Keep "Start in production mode" selected and click Next. Select server location closest to you and click on "Enable" and it’ll enable Firestore in your project.
 *PS: The location of the database may be locked if you've previously specified the server location in this Firebase project.*
 
-3. In the Firestore database add a new Collection named **MenuCategories**. Inside this collection add an auto-ID document with two fields i.e. catName of string type, and catNumber of number type. Similarly add few Menu Categories like Starters, Main Course, Drinks etc.
+3. Now we will add a new Collection to Firestore Database. The documents in this collection will serve as a Value Dictionary (dropdown list values) in our App. This step can be given as feture thru the App. But in the intrest of keeping the App simple, we are doing a hack by keying in the data directly to Database.
+
+In the Firestore database Web UI Console add a new Collection named **MenuCategories**. Inside this collection add an auto-ID document with two fields i.e. catName of string type, and catNumber of number type. Similarly add few Menu Categories like Starters, Main Course, Drinks etc.
+
+![Create Collection](/src/assets/help/menu_cat_collection_creation.png)
+
+![Collection details](/src/assets/help/menu_categories.png)
 
 ### Firebase Authentication
 
