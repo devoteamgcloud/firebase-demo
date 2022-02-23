@@ -46,8 +46,8 @@
 4. Firestore Security rules: Navigate to Rules tab in the Cloud Firestore Web UI.
 	Replace the exisitng security rule "allow read, write: if false;" with below 2 security rules to allow "read" access of all collections to unauthenticated users (public) and "write" access to only authenticated users. Click Publish after the changes are made.
 
-	  allow read, write: if request.auth != null;
-      allow read;
+	  `allow read, write: if request.auth != null;`
+	  `allow read;`
 
     ![Collection Security](/src/assets/help/firestore_security_rules.png)
 
@@ -80,29 +80,29 @@ Now we have a user that we’ll use as an authenticated user to perform write op
 
 
 3. Install firebase tools on the local development host.
-	*npm install -g firebase-tools*
+	`npm install -g firebase-tools`
 
 4. Run firebase login on the terminal
-	*firebase login*
+	`firebase login`
 
 5. Navigate into the project folder. In my case its the saltnpepper. Run the Firebase Init. 
-	*firebase init*
+	`firebase init`
 
     when it asks to select Firebase feature select, 
-		*Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys*
+	`Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys`
 	Then select 
-		*Use an existing project and select the project you have created for this tutorial.*
+	`Use an existing project and select the project you have created for this tutorial.`
 	Then it’ll ask you to set a public directory, write build which will act as our public directory. We’re not using the public directory created for us during project creation as it’s firebase hosting so it’ll look for a build folder.
 	
 	Then for the next two questions, you have to type N
-		? Configure as a single-page app (rewrite all URLs to /index.html)? No
-		? Set up automatic builds and deploys with GitHub? No
+	`? Configure as a single-page app (rewrite all URLs to /index.html)? No`
+	`? Set up automatic builds and deploys with GitHub? No`
 	Notice a build folder is created in your project directory. Now you’re ready to move to step 2 of setting up the Firebase hosting, but you’ve already done that so just press Next on step 2.
 
 6. Build the ReactJs project run this command from the VSCode terminal:
-	*npm run build*
+	`npm run build`
 
 7. Run the Firebase Deploy command to deploy the project to Firebase Hosting.
- 	*firebase deploy*
+	`firebase deploy`
 
 	Your Project is LIVE NOW !!!
