@@ -43,8 +43,8 @@
 
 	![Collection details](/src/assets/help/menu_categories.png)
 
-4. Firestore Security rules: Replace the exisitng security rule "allow read, write: if false;" 
-	Add below 2 security rules to allow read access to all collections for unauthenticated users (public) and write access for only authenticated users. Click Publish after the changes are made.
+4. Firestore Security rules: Navigate to Rules tab in the Cloud Firestore Web UI.
+	Replace the exisitng security rule "allow read, write: if false;" with below 2 security rules to allow "read" access of all collections to unauthenticated users (public) and "write" access to only authenticated users. Click Publish after the changes are made.
 
 	  allow read, write: if request.auth != null;
       allow read;
