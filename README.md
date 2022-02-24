@@ -1,3 +1,6 @@
+# Slides used during the presentation
+https://docs.google.com/presentation/d/1i01aSa1G0h9w00iIfgQSE1KizdYr_zVMnTIcrYDeW6Y/edit?usp=sharing
+
 # How to run this project
 ## Clone the Project from Github repo 
 
